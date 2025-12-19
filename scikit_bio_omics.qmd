@@ -1,0 +1,102 @@
+---
+title: scikit-bio omics data analysis
+author: Feng, Feng
+date: 12/17/2025
+format:
+  html:
+    html-math-method: mathjax
+    embed-resources: True
+    code-fold: False
+jupyter: python3
+---
+
+# Aim:
++ run omics data analysis with scikit-bio
+
+# Advantages
+
+        high dimensionality (many more features than samples), sparsity (most features are zero) and compositionality (features are interdependent within a sample)
+
+    Because of these traits, generic data analysis methods can be inadequate. Scikit-bio addresses these specific pain points with over 500 public-facing functions. Here are a few highlights from the paper:
+
+        Sparsity handling: The library integrates the Biological Observation Matrix (BIOM) format, which is essential for handling sparse tabular data efficiently.
+
+        Compositionality: For dealing with relative abundances scikit-bio implements transformations like center log-ratio (CLR) and differential abundance tests like ANCOM to handle compositional data correctly.
+
+        Tree structures: This is a major strength. The library allows you to construct and manipulate phylogenetic trees and, crucially, integrate them into community modeling. This enables diversity metrics that account for biological relatedness.
+
+## preparation
+
+```{python import}
+import skbio
+skbio.__version__
+```
+
+```{python try}
+
+from scipy.cluster.hierarchy import dendrogram, linkage
+from scipy.spatial.distance import pdist
+from matplotlib import pyplot as plt
+X = [[i] for i in [2, 8, 0, 4, 1, 9, 9, 0]]
+Z = linkage(X, 'ward')
+fig = plt.figure(figsize=(25, 10))
+dn = dendrogram(Z)
+
+from skbio import DistanceMatrix
+```
+## data
+
+run
+        wget -q "https://raw.githubusercontent.com/scikit-bio/scikit-bio-tutorials/main/01-basic-bioinfo/data/il6.ffn"
+
+## Clustering
+hierarchical/agglomerative clustering using scipy
+
+```{python clustering}
+
+from scipy.cluster.hierarchy import dendrogram, linkage
+from scipy.spatial.distance import pdist
+from matplotlib import pyplot as plt
+X = [[i] for i in [2, 8, 0, 4, 1, 9, 9, 0]]
+Z = linkage(X, 'ward')
+fig = plt.figure(figsize=(25, 10))
+dn = dendrogram(Z)
+
+from skbio import DistanceMatrix
+```
+
+A few notes about it.
+
++ linkage is the doing the actual clusting based on the data input y
+
++ the input y could be two different forms, 1D condensed matrix and 2D observation vector. 1D condensed vector is a flatten upper/lower **distance** matrix; and 2D observation vector are not distance matrix, but a value matrix. In the example code above, we have a 2D observation vector ( a list of list, in this case it is 8 observation and each with one feature). Each recode is with the id of the list index. We can compute the 1D condensed distant matrix from this 2D observation vector
+
++ method str, optional
+The linkage algorithm to use. See the Linkage Methods section below for full descriptions.
+
++ metric str or function, optional
+The distance metric to use in the case that y is a collection of observation vectors; ignored otherwise. See the pdist function for a list of valid distance metrics. A custom distance function can also be used.
+
+```{python try2}
+
+dd=pdist(X)
+
+print(dd)
+
+#and then into full matrix
+dmx=DistanceMatrix(dd)
+
+dmx.plot()
+
+#now try to feed the dd, 1D condensed matrix to linkage
+Z2 = linkage(dd, 'ward')
+fig, ax = plt.subplots(nrows=2, ncols=1,figsize=(25, 10))
+
+ax[0].plot( dendrogram(Z2))
+ax.set_title('Overlayed Dendrograms')
+ax.set_ylabel('Distance')
+ax[1].plot(dendrogram(Z))
+#plt.show()
+
+```
+
