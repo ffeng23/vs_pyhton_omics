@@ -24,3 +24,26 @@ https://scanpy.readthedocs.io/en/stable/tutorials/index.html
 ## R seurat
 
 Clustering and identifying cell types, adapted from and benchmarked with http://satijalab.org/seurat/pbmc3k_tutorial.htmland one of Seurat’s tutorials [2]: https://github.com/theislab/scanpy_usage/tree/master/170505_seurat.
+
+## data analysis very good book down 
+
+please read it and work on it.
+https://www.sc-best-practices.org/conditions/differential_gene_expression.html#pseudobulk
+
+
+## things to work on
+
++ pseudotime trajectory
+
++ scanpy DE
+
++ scanpy integration
+BBKNN
+
++ Pathway analysis GSEA
+
++ Cell type annotatoin 
+
+## CITE-Seq
+
+## perturb-seq
