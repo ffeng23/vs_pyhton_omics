@@ -47,3 +47,6 @@ BBKNN
 ## CITE-Seq
 
 ## perturb-seq
+
+## scRNA  cell type annotation
+https://scverse-tutorials.readthedocs.io/en/latest/notebooks/basic-scrna-tutorial.html#cell-type-annotation
