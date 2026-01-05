@@ -1052,6 +1052,23 @@ wheels = [
 ]
 
 [[package]]
+name = "ipywidgets"
+version = "8.1.8"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "comm" },
+    { name = "ipython", version = "8.37.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11'" },
+    { name = "ipython", version = "9.8.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
+    { name = "jupyterlab-widgets" },
+    { name = "traitlets" },
+    { name = "widgetsnbextension" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/4c/ae/c5ce1edc1afe042eadb445e95b0671b03cee61895264357956e61c0d2ac0/ipywidgets-8.1.8.tar.gz", hash = "sha256:61f969306b95f85fba6b6986b7fe45d73124d1d9e3023a8068710d47a22ea668", size = 116739, upload-time = "2025-11-01T21:18:12.393Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/56/6d/0d9848617b9f753b87f214f1c682592f7ca42de085f564352f10f0843026/ipywidgets-8.1.8-py3-none-any.whl", hash = "sha256:ecaca67aed704a338f88f67b1181b58f821ab5dc89c1f0f5ef99db43c1c2921e", size = 139808, upload-time = "2025-11-01T21:18:10.956Z" },
+]
+
+[[package]]
 name = "jaraco-classes"
 version = "3.4.0"
 source = { registry = "https://pypi.org/simple" }
@@ -1192,6 +1209,15 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/90/51/9187be60d989df97f5f0aba133fa54e7300f17616e065d1ada7d7646b6d6/jupyterlab_pygments-0.3.0.tar.gz", hash = "sha256:721aca4d9029252b11cfa9d185e5b5af4d54772bb8072f9b7036f4170054d35d", size = 512900, upload-time = "2023-11-23T09:26:37.44Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/b1/dd/ead9d8ea85bf202d90cc513b533f9c363121c7792674f78e0d8a854b63b4/jupyterlab_pygments-0.3.0-py3-none-any.whl", hash = "sha256:841a89020971da1d8693f1a99997aefc5dc424bb1b251fd6322462a1b8842780", size = 15884, upload-time = "2023-11-23T09:26:34.325Z" },
+]
+
+[[package]]
+name = "jupyterlab-widgets"
+version = "3.0.16"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/26/2d/ef58fed122b268c69c0aa099da20bc67657cdfb2e222688d5731bd5b971d/jupyterlab_widgets-3.0.16.tar.gz", hash = "sha256:423da05071d55cf27a9e602216d35a3a65a3e41cdf9c5d3b643b814ce38c19e0", size = 897423, upload-time = "2025-11-01T21:11:29.724Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/ab/b5/36c712098e6191d1b4e349304ef73a8d06aed77e56ceaac8c0a306c7bda1/jupyterlab_widgets-3.0.16-py3-none-any.whl", hash = "sha256:45fa36d9c6422cf2559198e4db481aa243c7a32d9926b500781c830c80f7ecf8", size = 914926, upload-time = "2025-11-01T21:11:28.008Z" },
 ]
 
 [[package]]
@@ -3171,6 +3197,37 @@ wheels = [
 ]
 
 [[package]]
+name = "scikit-misc"
+version = "0.5.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "numpy" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/02/71/d6d2d1710fb56473817b0520212d33874069952dcb417614f6dd24efb51e/scikit_misc-0.5.2.tar.gz", hash = "sha256:49fa30e4051b341edc7422db66a12c0f59d468729285bfe644d10924dc51be0a", size = 298626, upload-time = "2025-11-03T11:56:30.08Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/4b/64/2059cfd2de157e08567792f008400ec8217e41540ede69bf8a57a779b4c1/scikit_misc-0.5.2-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:085fff2318607e00d9925208de467e9752ea6e71235058818da92989c8851536", size = 163090, upload-time = "2025-11-03T11:56:07.341Z" },
+    { url = "https://files.pythonhosted.org/packages/45/6b/dda5d3959505a7bf5ac51fb5df69285f7ed0b1aebec518d544a5a0cc4040/scikit_misc-0.5.2-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:96253aee85a921b832d63a7339053ea79d65c44ac6a5b0f9bd06be97d197d8c3", size = 151541, upload-time = "2025-11-03T11:56:08.745Z" },
+    { url = "https://files.pythonhosted.org/packages/50/ab/0a00c69e54e45096cff21b36d0e7737464c3ea0cc63a0a1ba608a756dd97/scikit_misc-0.5.2-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:bee742b00082a9f901c4637bc94063127b6f30748f3d18f4c4f32b304a0fad06", size = 186535, upload-time = "2025-11-03T11:56:10.077Z" },
+    { url = "https://files.pythonhosted.org/packages/d0/81/59aeb22abb4478235490492d9bb9cec8589dda502da31a386675f4d16797/scikit_misc-0.5.2-cp310-cp310-win_amd64.whl", hash = "sha256:f3d6869fe985059db317d91cbaf5a671d42418da835c76ddd1ead8ea78e43750", size = 153115, upload-time = "2025-11-03T11:56:11.31Z" },
+    { url = "https://files.pythonhosted.org/packages/6d/a2/e6d7cf850cd01a40d9d2ba0f78968cb4c67aab2e502384ea2fd02f71b2f1/scikit_misc-0.5.2-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:ffdf5bbfc9d6fea57506d460461b8cc5108b68cf18b7b2f952301ee0581956de", size = 163041, upload-time = "2025-11-03T11:56:12.436Z" },
+    { url = "https://files.pythonhosted.org/packages/60/c5/bf7b2679594ad1747dad9da2882f365dc8916a60ff16b241820c6bb30c04/scikit_misc-0.5.2-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:07308c764bd78ce14ea34db33c88a07e2ef07250eb8ac6a7faf383246926afa9", size = 151644, upload-time = "2025-11-03T11:56:13.574Z" },
+    { url = "https://files.pythonhosted.org/packages/fc/91/9f5611cacc2a7a09f4251051fca0d55c21054faa8b345ec431711816cd3d/scikit_misc-0.5.2-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:2981c3207f02308327845baf8a7d06b829cc632cf605af517cc46bb146915aa9", size = 186981, upload-time = "2025-11-03T11:56:14.564Z" },
+    { url = "https://files.pythonhosted.org/packages/fb/c3/35c9fe02ddda3491df25db7356d849038666bedc3ba6ebdb2217ec954045/scikit_misc-0.5.2-cp311-cp311-win_amd64.whl", hash = "sha256:aee708678a3e6a9567cb47e3d50cb802f1dd8add2c823bb66ff9267096c9e72a", size = 152838, upload-time = "2025-11-03T11:56:15.803Z" },
+    { url = "https://files.pythonhosted.org/packages/56/43/1daca03447aa3bb80e4ca604fac647fc9ce926d928102a2aab9a9426ef18/scikit_misc-0.5.2-cp312-cp312-macosx_10_13_x86_64.whl", hash = "sha256:36f33c33494bea53196e68ba165a03cc0af19d09f83585adb0dc469d62dff0b7", size = 162933, upload-time = "2025-11-03T11:56:16.738Z" },
+    { url = "https://files.pythonhosted.org/packages/59/48/5a486b3a9cff8cd8abc0bdc21a1a23f9c5b73962ef6e66a502b7636fad08/scikit_misc-0.5.2-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:efc64474adcec7fc373b13519db19682ae1e75fbed0da044efce1ae232a6bb01", size = 150855, upload-time = "2025-11-03T11:56:17.895Z" },
+    { url = "https://files.pythonhosted.org/packages/6a/7e/f003fd232ec3c3e29ae565e38536dbdef417c76f7c29a67203e05b800f44/scikit_misc-0.5.2-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:cd5a6e06864b07e9fe18c2bac756163e87f26615e5ddaa5f6129fd62535b7cfb", size = 182978, upload-time = "2025-11-03T11:56:19.104Z" },
+    { url = "https://files.pythonhosted.org/packages/46/35/fe7a3074c1453b2b8cd259d1797fc5146d2383603f9ac838c92bc0bca148/scikit_misc-0.5.2-cp312-cp312-win_amd64.whl", hash = "sha256:4e46fd2e8c46625d1e69ea7fa6f4544d73203387e2601f2bbce82ff0a086ada1", size = 150692, upload-time = "2025-11-03T11:56:20.286Z" },
+    { url = "https://files.pythonhosted.org/packages/c7/8f/ded5b0adcac0633653c3ea752d6ef2aa41ffa90e15bf87aaa8b56529a23a/scikit_misc-0.5.2-cp313-cp313-macosx_10_13_x86_64.whl", hash = "sha256:7dfeb264cf8e580e7712e9f5cc9b14b0c159a92a8aeb3e6ac2f9a5dd1b7816f3", size = 161728, upload-time = "2025-11-03T11:56:21.146Z" },
+    { url = "https://files.pythonhosted.org/packages/fb/24/0669b2c82b26405f1a37a69598b77530cce11f8a7e2ab38295b4b03e534f/scikit_misc-0.5.2-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:d9634dac5c60a09b890f44d884d558086345dbbc0bd8a69b641c29177d0be116", size = 149977, upload-time = "2025-11-03T11:56:22.027Z" },
+    { url = "https://files.pythonhosted.org/packages/5f/a3/cbf1039c0e0cb1f2cab13deb5cd3e44ecdba17952d3134e5a5ce97330468/scikit_misc-0.5.2-cp313-cp313-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:87bf054fd37fecb437ba057dc0930b2ff727b9a8d6d4d8959f25e2c626b2fd6c", size = 182448, upload-time = "2025-11-03T11:56:22.911Z" },
+    { url = "https://files.pythonhosted.org/packages/bb/e3/40fa5b73733446d88471fd959fcb31f625870e452081c92ff739356bc616/scikit_misc-0.5.2-cp313-cp313-win_amd64.whl", hash = "sha256:986306ae07974101b53fa320d27643694de8fef1a72fa478853dc6cf33854f6d", size = 150074, upload-time = "2025-11-03T11:56:24.499Z" },
+    { url = "https://files.pythonhosted.org/packages/79/8c/b3db8d0372bc44b713357348ecbe3ea4b757ede17efc2890e683864e1aac/scikit_misc-0.5.2-cp314-cp314-macosx_10_15_x86_64.whl", hash = "sha256:d8acca6c314610c41528d74813018c8d756dee8579c449571db61d97168edf64", size = 161798, upload-time = "2025-11-03T11:56:25.301Z" },
+    { url = "https://files.pythonhosted.org/packages/36/44/4f53f914d27b2d8b776aff289d858f79c67a436946f147542cc6a10430a5/scikit_misc-0.5.2-cp314-cp314-macosx_11_0_arm64.whl", hash = "sha256:58bb099631a2c97812698b8591d707e31d3f49de2bed46fd6607338982dfd907", size = 150396, upload-time = "2025-11-03T11:56:26.485Z" },
+    { url = "https://files.pythonhosted.org/packages/90/f0/5516a42122635abba704b038ecbec58895ab38be46909759848e37b03828/scikit_misc-0.5.2-cp314-cp314-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:01d7ce81168675eb2b125d7b0d2fefbd4208c223cc96cb62f8453ce86afbfc9f", size = 182632, upload-time = "2025-11-03T11:56:27.345Z" },
+    { url = "https://files.pythonhosted.org/packages/12/cf/66806ad4a162bbe8a70c397d1c27c316a419c6d13b7429d729ebba362235/scikit_misc-0.5.2-cp314-cp314-win_amd64.whl", hash = "sha256:0f9f868b89c209d79a598d79cebdb7df7effa82526ee809b044ceebeb944bc8f", size = 152889, upload-time = "2025-11-03T11:56:28.702Z" },
+]
+
+[[package]]
 name = "scipy"
 version = "1.15.3"
 source = { registry = "https://pypi.org/simple" }
@@ -3302,6 +3359,30 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/ac/70/64b4d7ca92f9cf2e6fc6aaa2eecf80bb9b6b985043a9583f32f8177ea122/scipy-1.16.3-cp314-cp314t-musllinux_1_2_x86_64.whl", hash = "sha256:ffa6eea95283b2b8079b821dc11f50a17d0571c92b43e2b5b12764dc5f9b285d", size = 38802779, upload-time = "2025-10-28T17:37:59.393Z" },
     { url = "https://files.pythonhosted.org/packages/61/82/8d0e39f62764cce5ffd5284131e109f07cf8955aef9ab8ed4e3aa5e30539/scipy-1.16.3-cp314-cp314t-win_amd64.whl", hash = "sha256:d9f48cafc7ce94cf9b15c6bffdc443a81a27bf7075cf2dcd5c8b40f85d10c4e7", size = 39471128, upload-time = "2025-10-28T17:38:05.259Z" },
     { url = "https://files.pythonhosted.org/packages/64/47/a494741db7280eae6dc033510c319e34d42dd41b7ac0c7ead39354d1a2b5/scipy-1.16.3-cp314-cp314t-win_arm64.whl", hash = "sha256:21d9d6b197227a12dcbf9633320a4e34c6b0e51c57268df255a0942983bac562", size = 26464127, upload-time = "2025-10-28T17:38:11.34Z" },
+]
+
+[[package]]
+name = "scvelo"
+version = "0.3.3"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "anndata", version = "0.11.4", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11'" },
+    { name = "anndata", version = "0.12.7", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
+    { name = "loompy" },
+    { name = "matplotlib" },
+    { name = "numba" },
+    { name = "numpy" },
+    { name = "pandas" },
+    { name = "scanpy" },
+    { name = "scikit-learn", version = "1.7.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11'" },
+    { name = "scikit-learn", version = "1.8.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
+    { name = "scipy", version = "1.15.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11'" },
+    { name = "scipy", version = "1.16.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
+    { name = "umap-learn" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/ae/31/bb5292e3b48bf021b6a9e75308a7e80d415e0e2721f642808bd902c64d13/scvelo-0.3.3.tar.gz", hash = "sha256:9383a8712f81f0f2d2f1bddcfc81889ede06a0027de537b5b9af83ed821390c7", size = 27327093, upload-time = "2024-12-09T07:51:43.486Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/5b/9a/97224ad312fca04b8dec60c1b743096344c3b2fff5f56a9a817576c5cf4d/scvelo-0.3.3-py3-none-any.whl", hash = "sha256:cb9821a86d0c6b9cb79d9fd867480d7caece27530d1d30b49052a0fa9d94a187", size = 196841, upload-time = "2024-12-09T07:51:40.783Z" },
 ]
 
 [[package]]
@@ -3667,11 +3748,21 @@ wheels = [
 ]
 
 [[package]]
+name = "widgetsnbextension"
+version = "4.0.15"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/bd/f4/c67440c7fb409a71b7404b7aefcd7569a9c0d6bd071299bf4198ae7a5d95/widgetsnbextension-4.0.15.tar.gz", hash = "sha256:de8610639996f1567952d763a5a41af8af37f2575a41f9852a38f947eb82a3b9", size = 1097402, upload-time = "2025-11-01T21:15:55.178Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/3f/0e/fa3b193432cfc60c93b42f3be03365f5f909d2b3ea410295cf36df739e31/widgetsnbextension-4.0.15-py3-none-any.whl", hash = "sha256:8156704e4346a571d9ce73b84bee86a29906c9abfd7223b7228a28899ccf3366", size = 2196503, upload-time = "2025-11-01T21:15:53.565Z" },
+]
+
+[[package]]
 name = "workspace"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "ipykernel" },
+    { name = "ipywidgets" },
     { name = "kb-python" },
     { name = "matlib" },
     { name = "matplot" },
@@ -3685,13 +3776,16 @@ dependencies = [
     { name = "scikit-image", version = "0.26.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
     { name = "scikit-learn", version = "1.7.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11'" },
     { name = "scikit-learn", version = "1.8.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
+    { name = "scikit-misc" },
     { name = "scipy", version = "1.15.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11'" },
     { name = "scipy", version = "1.16.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
+    { name = "scvelo" },
 ]
 
 [package.metadata]
 requires-dist = [
     { name = "ipykernel", specifier = ">=7.1.0" },
+    { name = "ipywidgets", specifier = ">=8.1.8" },
     { name = "kb-python", specifier = ">=0.29.5" },
     { name = "matlib", specifier = ">=0.1.2" },
     { name = "matplot", specifier = ">=0.1.9" },
@@ -3703,7 +3797,9 @@ requires-dist = [
     { name = "scikit-bio", specifier = ">=0.7.1.post1" },
     { name = "scikit-image", specifier = ">=0.25.2" },
     { name = "scikit-learn", specifier = ">=1.7.2" },
+    { name = "scikit-misc", specifier = ">=0.5.2" },
     { name = "scipy", specifier = ">=1.15.3" },
+    { name = "scvelo", specifier = ">=0.3.3" },
 ]
 
 [[package]]

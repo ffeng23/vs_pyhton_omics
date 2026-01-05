@@ -50,3 +50,11 @@ BBKNN
 
 ## scRNA  cell type annotation
 https://scverse-tutorials.readthedocs.io/en/latest/notebooks/basic-scrna-tutorial.html#cell-type-annotation
+
+## a must run tutorial for sc best practise tutorial!!!
+
+https://github.com/theislab/single-cell-tutorial/blob/master/latest_notebook/Case-study_Mouse-intestinal-epithelium_1906.ipynb
+
+## cell cycle scoring!!
+
+Need to tackle this later!!! Might be important to lower the variations/noises.

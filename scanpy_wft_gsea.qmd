@@ -1,0 +1,21 @@
+---
+title: single cell RNASeq data analysis, GSEA
+date: 1/4/2026
+author: Feng, Feng
+format:
+  html:
+    embed-resources: true
+    html-math-method: mathjax
+    code-fold: false
+---
+
+
+It seems that we g:Profile (a web app) to do GSEAS (why?) 
+what is the benefit to us g:Profile.
+
+There is an R package to connect to web server of g:Profile, https://pdfs.semanticscholar.org/366d/13569bcdbaef40cfd71ec49298e3da6ce50d.pdf. See the code examples in that link. Another R code example using gprofiler can be seen at https://sib-swiss.github.io/single-cell-training/day3/day3-2_enrichment_analysis.html
+
+There is also an old Python API to g:Profile, but was outdated after the new version of g:Profile were released. We can find the python code to use the old API at 
+https://github.com/scverse/scanpy-tutorials/blob/main/scanpy_workshop/day2_02_GeneSetEnrichmentAnalysis.ipynb
+
+Note: clearly we can call to use g:Profile on bulk RNASeq. (but still why we want to use this instead of other tools like fgsea(??))
